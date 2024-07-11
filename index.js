@@ -5,8 +5,10 @@ import { getHealth } from "./controller/getHealth.js";
 import { postShoes, getShoes, getShoesId, putShoesId, deleteShoesId } from "./controller/shoes.js";
 import { error } from "./controller/error.js";
 import mongoose from "mongoose";
+import cors from "cors"
 
 const app = express();
+app.use(cors())
 app.use(express.json());
 
 const connection = async ()=>{

@@ -7,7 +7,8 @@ const postShoes = async (req, res) => {
       price, 
       color, 
       image, 
-      gender, 
+      gender,
+      review, 
       description } = req.body;
   
     
@@ -17,6 +18,7 @@ const postShoes = async (req, res) => {
       color:color, 
       image:image, 
       gender:gender, 
+      review:review,
       description:description
     })
 
@@ -56,7 +58,7 @@ const getShoesId = async (req, res) => {
   
   
 const putShoesId = async (req, res) => {
-    const { brand, price, color, image, gender, description } = req.body;
+    const { brand, price, color, image, gender,review, description } = req.body;
   
     const { id } = req.params;
   
@@ -65,7 +67,8 @@ const putShoesId = async (req, res) => {
     price:price, 
     color:color, 
     image:image, 
-    gender:gender, 
+    gender:gender,
+    review:review, 
     description:description
    }})
 
