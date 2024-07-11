@@ -34,7 +34,7 @@ const postShoes = async (req, res) => {
 
 const getShoes =async (req, res) => { 
   
-  const allShoes =await Shoes.find()
+  const allShoes =await Shoes.find().sort({updatedAt: -1})
 
     res.json({
       success: true,

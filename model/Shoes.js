@@ -8,6 +8,9 @@ const shoesSchema = new Schema({
     gender : String,
     review : String,
     description : String
+},
+{
+    timestamps:true
 })
 
 const Shoes = model("Shoes", shoesSchema)
